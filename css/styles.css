@@ -1,16 +1,27 @@
 /* Base Styles */
 :root {
-    --primary-color: #FF6B9D;  /* Soft pink */
-    --secondary-color: #9C6BFF;  /* Light purple */
-    --accent-color: #6B9DFF;  /* Soft blue */
-    --accent-secondary: #6BFF9D;  /* Mint green */
-    --text-color: #3A2E4D;  /* Deep purple-gray */
-    --text-light: #6B7280;  /* Muted gray */
-    --background-light: #FFF5F9;  /* Very light pink */
-    --background-dark: #2D1B69;  /* Deep purple */
+    /* Primary Colors */
+    --primary-color: #FF7EB3;  /* Soft pink */
+    --secondary-color: #A78BFA;  /* Light purple */
+    --accent-color: #7DD3FC;  /* Soft blue */
+    --accent-secondary: #A7F3D0;  /* Mint green */
+    
+    /* Text Colors */
+    --text-color: #4B5563;  /* Slate gray */
+    --text-dark: #1F2937;   /* Dark gray */
+    --text-light: #6B7280;  /* Light gray */
+    
+    /* Background Colors */
+    --background-light: #FDF2F8;  /* Very light pink */
+    --background-offset: #FCE7F3;  /* Slightly darker pink */
+    --background-dark: #4C1D95;  /* Deep purple */
     --white: #FFFFFF;
-    --off-white: #FFF9FB;  /* Slightly off-white with pink tint */
-    --border-color: #F0D6E4;  /* Light pink-gray */
+    --off-white: #FDF8FC;  /* Slightly off-white */
+    
+    /* UI Colors */
+    --border-color: #F3E8FF;  /* Light purple tint */
+    --overlay: rgba(0, 0, 0, 0.1);  /* For overlays */
+    --shadow-color: rgba(253, 242, 248, 0.5);  /* For soft shadows */
     --success-color: #34D399;  /* Mint green */
     --error-color: #F87171;  /* Soft red */
     --warning-color: #FBBF24;  /* Soft yellow */
@@ -312,16 +323,19 @@ img {
 }
 
 /* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 .hero {
-    min-height: 70vh;
-    padding: 120px 0 80px;
+    min-height: 85vh;
+    padding: 100px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFF5F9 0%, #F7E1EC 50%, #E8C6DC 100%);
+    background: var(--background-light);
+    background: linear-gradient(135deg, var(--background-light) 0%, var(--background-offset) 100%);
 }
 
 .hero::before {
@@ -335,22 +349,40 @@ img {
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 800px;
     padding: 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
+    margin: 0 auto;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-    line-height: 1.2;
-    font-family: 'Poppins', sans-serif;
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.1;
+    font-family: 'Dancing Script', cursive;
     position: relative;
     display: inline-block;
+    letter-spacing: 1px;
+    transform: rotate(-2deg);
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(-0.5deg);
 }
 
 .hero h1::after {
@@ -365,22 +397,98 @@ img {
     border-radius: 2px;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 auto 2.5rem;
     line-height: 1.6;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
 }
 
-.hero-buttons {
+.hero-cta {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: darken(var(--primary-color, 10%));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 126, 179, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 126, 179, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hero Shapes */
+.hero-shape-1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.1;
+    top: -100px;
+    right: -100px;
+    z-index: 1;
+}
+
+.hero-shape-2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));
+    opacity: 0.1;
+    bottom: -50px;
+    left: -50px;
+    z-index: 1;
+}
+
+.hero-shape-3 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background: var(--primary-color);
+    opacity: 0.05;
+    top: 50%;
+    left: 10%;
+    transform: rotate(45deg);
+    z-index: 1;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(45deg);
+    }
 }
 
 .hero-shape {
