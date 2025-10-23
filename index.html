@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megan Wang | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#home">MW</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#fun">Fun</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__lines"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Megan Wang</h1>
+            <p class="hero-subtitle">Creating meaningful experiences through design and technology</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Megan, a passionate developer and designer with a love for creating beautiful, functional digital experiences. I enjoy turning complex problems into simple, intuitive solutions.</p>
+                    <p>When I'm not coding or designing, you can find me exploring new art techniques, reading science fiction, or hiking in nature.</p>
+                    <div class="skills">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h4>Design</h4>
+                                <ul>
+                                    <li>UI/UX Design</li>
+                                    <li>Visual Design</li>
+                                    <li>Prototyping</li>
+                                    <li>Figma</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Development</h4>
+                                <ul>
+                                    <li>HTML/CSS/JS</li>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- Replace with your image -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Job Title</h3>
+                        <h4>Company Name</h4>
+                        <span class="date">Month Year - Present</span>
+                        <p>Brief description of your role and key achievements.</p>
+                        <ul>
+                            <li>Responsibility or achievement 1</li>
+                            <li>Responsibility or achievement 2</li>
+                            <li>Responsibility or achievement 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more timeline items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+                <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+            </div>
+            <div class="research-grid">
+                <div class="research-card" data-category="machine-learning nlp">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Large Language Models for Code Generation</h3>
+                    <p class="research-meta">Stanford University, 2023</p>
+                    <p>Research on improving code generation using large language models with a focus on efficiency and accuracy.</p>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-icon"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="#" class="btn btn-outline btn-icon"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                
+                <div class="research-card" data-category="computer-vision">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>3D Object Detection in Point Clouds</h3>
+                    <p class="research-meta">MIT, 2023</p>
+                    <p>Advanced techniques for 3D object detection using point cloud data and deep learning.</p>
+                    <div class="tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">3D Vision</span>
+                        <span class="tag">Deep Learning</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-icon"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="#" class="btn btn-outline btn-icon"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                
+                <div class="research-card" data-category="robotics">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Human-Robot Collaboration</h3>
+                    <p class="research-meta">CMU, 2023</p>
+                    <p>Exploring safe and efficient human-robot collaboration in industrial settings.</p>
+                    <div class="tags">
+                        <span class="tag">Robotics</span>
+                        <span class="tag">HRI</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-icon"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="#" class="btn btn-outline btn-icon"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>E-commerce Platform</h3>
+                            <span class="project-date">2023</span>
+                        </div>
+                        <p>A full-stack e-commerce platform with user authentication, product catalog, and payment processing.</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="mobile data-science">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Health Tracker App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Health Tracker App</h3>
+                            <span class="project-date">2023</span>
+                        </div>
+                        <p>Mobile application for tracking fitness metrics and health data with personalized insights.</p>
+                        <div class="tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="UI/UX Design System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Case Study"><i class="fas fa-file-alt"></i></a>
+                                <a href="#" class="project-link" title="View Prototype"><i class="fas fa-paint-brush"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Design System</h3>
+                            <span class="project-date">2023</span>
+                        </div>
+                        <p>Comprehensive design system with reusable components, patterns, and guidelines for consistent UI/UX.</p>
+                        <div class="tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Section -->
+    <section id="art" class="section">
+        <div class="container">
+            <h2 class="section-title">Art</h2>
+            <div class="art-gallery">
+                <div class="art-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Artwork 1">
+                    <div class="art-overlay">
+                        <h3>Artwork Title</h3>
+                        <p>Medium, Year</p>
+                    </div>
+                </div>
+                <!-- Add more art items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Section -->
+    <section id="fun" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Fun</h2>
+            <div class="fun-content">
+                <p>Here's a space to share your hobbies, interests, or anything fun about you!</p>
+                <!-- Add your fun content here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Megan Wang. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>
